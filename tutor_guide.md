@@ -56,6 +56,15 @@ Este documento serve como referência de diretrizes para o desenvolvimento do pr
 
 ## 📋 Próximos Passos (Plano de Trabalho)
 
-### Fase 8: Interface Gráfica de Usuário (Chat UI)
-- [ ] Desenvolver uma interface web minimalista (como um painel HTML/JS servido pelo próprio FastAPI ou via Streamlit) para interação em formato de chat.
+### Fase 8: Interface Gráfica de Usuário - Chat UI (Concluído)
+- [x] Desenvolver uma interface web com design premium (dark mode, glassmorphism e responsiva).
+- [x] Servir a interface a partir da rota raiz `GET /` com integração direta e sem problemas de CORS.
+- [x] Permitir configuração dinâmica da chave de segurança (`X-API-Key`) e persistência de sessões (`thread_id`) no localStorage.
+- [x] Adicionar suporte a renderização de Markdown (incluindo tabelas de consultas e logs) no chat.
+
+---
+
+## 📈 Conclusão do Desenvolvimento
+O projeto agora está na branch `main` no GitHub e pronto para deploy integrado e de 1 clique no Render via blueprint (`render.yaml`).
+
 
