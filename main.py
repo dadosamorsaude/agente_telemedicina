@@ -1,5 +1,7 @@
+import os
 from fastapi import FastAPI, HTTPException, Security, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from fastapi.security import APIKeyHeader
 from pydantic import BaseModel
 from langchain_core.messages import HumanMessage
@@ -37,10 +39,14 @@ class ChatQuery(BaseModel):
     thread_id: str
 
 
-@app.get("/")
-async def root_health_check():
-    """Endpoint de health check para o Render validar se a API está online."""
-    return {"status": "healthy", "service": "agente-telemedicina"}
+@app.get("/", response_class=HTMLResponse)
+async def root_chat_ui():
+    """Retorna o painel da interface gráfica do Chat UI para o agente."""
+    template_path = os.path.join(os.path.dirname(__file__), "app", "templates", "index.html")
+    if os.path.exists(template_path):
+        with open(template_path, "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    return HTMLResponse(content="<h1>Chat UI Template Not Found</h1>", status_code=404)
 
 
 @app.post("/api/chat")
