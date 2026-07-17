@@ -52,15 +52,9 @@ Este documento serve como referência de diretrizes para o desenvolvimento do pr
 - [x] Ajustar conexão do Postgres na persistência de memória para usar `autocommit=True` (psycopg3).
 - [x] Criar `Dockerfile` multi-stage com `uv` e blueprint `render.yaml` para deploy simplificado.
 
----
-
 ## 📋 Próximos Passos (Plano de Trabalho)
 
-### Fase 8: Interface Gráfica de Usuário - Chat UI (Concluído)
-- [x] Desenvolver uma interface web com design premium (dark mode, glassmorphism e responsiva).
-- [x] Servir a interface a partir da rota raiz `GET /` com integração direta e sem problemas de CORS.
-- [x] Permitir configuração dinâmica da chave de segurança (`X-API-Key`) e persistência de sessões (`thread_id`) no localStorage.
-- [x] Adicionar suporte a renderização de Markdown (incluindo tabelas de consultas e logs) no chat.
+- O frontend/interface gráfica (Chat UI) será desenvolvido de forma externa utilizando a plataforma **Lovable**, consumindo esta API hospedada no Render.
 
 ---
 
