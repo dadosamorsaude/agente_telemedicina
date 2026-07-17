@@ -79,7 +79,7 @@ Crie um arquivo `.env` na raiz do projeto baseado nas seguintes variáveis:
 AWS_ACCESS_KEY_ID="seu_access_key"
 AWS_SECRET_ACCESS_KEY="seu_secret_key"
 AWS_REGION="us-east-1"
-ATHENA_DATABASE="pdgt_amorsaude_tecnologia"
+ATHENA_DATABASE="seu_athena_database"
 ATHENA_STAGING_DIR="s3://seu-bucket-de-staging/"
 
 # LLMs
