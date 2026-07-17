@@ -1,5 +1,5 @@
 # Use official uv image as builder
-FROM astral-sh/uv:python3.12-bookworm-slim AS builder
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS builder
 
 # Enable bytecode compilation
 ENV UV_COMPILE_BYTECODE=1
