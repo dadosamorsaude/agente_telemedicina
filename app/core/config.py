@@ -21,6 +21,9 @@ class Settings(BaseSettings):
     #DATABASE SETTINGS:
     DATABASE_URL: str
 
+    # RAG Settings:
+    RAG_COLLECTION_NAME: str = "regras_telemedicina"
+
     # API Security:
     API_KEY: Optional[str] = None
 
